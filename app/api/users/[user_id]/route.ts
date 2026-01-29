@@ -2,6 +2,7 @@ import { handleRequest } from "@/lib/server/handleReques";
 import { validateParams } from "@/lib/server/validateParams";
 import { UserIdSchema } from "@/features/users/schema";
 import { usersService } from "@/features/users/service";
+import {User} from "@/features/users/schema";
 // default　exportじゃない限り、｛｝で名前指定してインポートする
 
 
@@ -15,7 +16,8 @@ export async function GET(
   return handleRequest(async () => {
     const validated_params = await validateParams(UserIdSchema, params);
 
-    const user = await usersService.getUserById(validated_params.user_id);
+    const user:User = await usersService.getUserById(validated_params.id);
+
 
     return Response.json({ user });
   });
