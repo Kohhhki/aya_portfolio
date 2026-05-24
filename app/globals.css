@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  html { height: 100svh; }
+  body { height: 100%; }
+}
+
+/* ========== Design Tokens — Apple-inspired ========== */
+
+.light {
+  --background-0: #f5f5f7;
+  --background-1: #ffffff;
+  --foreground-0: #1d1d1f;
+  --foreground-1: #6e6e73;
+  --accent-0: #0071e3;
+  --accent-1: #2997ff;
+  --grass: #e8e8ed;
+  --accent-warning: #ff3b30;
+}
+
+.dark {
+  --background-0: #000000;
+  --background-1: #1c1c1e;
+  --foreground-0: #f5f5f7;
+  --foreground-1: #98989d;
+  --accent-0: #2997ff;
+  --accent-1: #0071e3;
+  --grass: #3a3a3c;
+  --accent-warning: #ff453a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background-0: var(--background-0);
+  --color-background-1: var(--background-1);
+  --color-foreground-0: var(--foreground-0);
+  --color-foreground-1: var(--foreground-1);
+  --color-accent-0: var(--accent-0);
+  --color-accent-1: var(--accent-1);
+  --color-grass: var(--grass);
+  --color-accent-warning: var(--accent-warning);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-1);
+  color: var(--foreground-0);
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    110deg,
+    var(--background-0) 0%,
+    var(--background-1) 40%,
+    var(--background-0) 80%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* Gradient text utility */
+@utility gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
