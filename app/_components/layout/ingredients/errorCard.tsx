@@ -37,7 +37,7 @@ const ErrorCard = memo(function ErrorCard({ error, onDelete }: Props) {
       </div>
       <button
         onClick={onDelete}
-        className="p-1 hover:bg-grass rounded-full transition-colors cursor-pointer absolute top-2 right-2"
+        className="p-1 hover:bg-foreground-0/8 rounded-full transition-colors cursor-pointer absolute top-2 right-2"
       >
         <MdClose size={20} className="text-foreground-1" />
       </button>

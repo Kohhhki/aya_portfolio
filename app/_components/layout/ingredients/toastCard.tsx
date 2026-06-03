@@ -22,9 +22,9 @@ const DEFAULT_DURATION_MS: Record<Toast['tone'], number> = {
 
 const TONE_STYLES = {
   success: {
-    border: 'border-accent-0',
-    iconWrapper: 'bg-accent-0/10',
-    icon: 'text-accent-0',
+    border: 'border-accent/40',
+    iconWrapper: 'bg-accent/10',
+    icon: 'text-accent',
     Icon: MdCheckCircle,
   },
   info: {
@@ -86,7 +86,7 @@ const ToastCard = memo(function ToastCard({ toast }: Props) {
               toast.action!.onClick();
               toastStore.getState().dismissToast(toast.id);
             }}
-            className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-accent-0 uppercase hover:opacity-80 transition-opacity cursor-pointer"
+            className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-accent uppercase hover:opacity-80 transition-opacity cursor-pointer"
           >
             {toast.action.label}
             <span aria-hidden>→</span>
@@ -96,7 +96,7 @@ const ToastCard = memo(function ToastCard({ toast }: Props) {
       <button
         type="button"
         onClick={() => toastStore.getState().dismissToast(toast.id)}
-        className="p-1 hover:bg-grass rounded-full transition-colors cursor-pointer absolute top-2 right-2"
+        className="p-1 hover:bg-foreground-0/8 rounded-full transition-colors cursor-pointer absolute top-2 right-2"
         aria-label="dismiss"
       >
         <MdClose size={18} className="text-foreground-1" />
