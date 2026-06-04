@@ -20,7 +20,7 @@ export const MEMBERS: Member[] = [
   {
     id: 'ukyo',
     name: 'Ukyo Takamatsu',
-    role: 'Frontend / Mobile Engineer',
+    role: 'devPM / Frontend / Mobile Engineer',
     initials: 'UT',
     image: '/products/members/Ukyo.jpg',
     bio: '千葉県立小金高校卒、東洋大学理工学部電気電子情報工学科所属。TypeScript、Next.js、Java、Spring、AWS、OCI、Docker 等を扱う。Cluee を個人で制作後、このチームを立ち上げ、Routem のフロントエンド・モバイル開発に取り組んでいます。趣味はアコースティックギター、スノーボード。',

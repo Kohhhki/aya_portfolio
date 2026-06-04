@@ -334,10 +334,10 @@ export default function Home() {
                 プロダクトに関するお問い合わせは、PM のメールアドレスまでご連絡ください。
               </p>
               <a
-                href="mailto:negitoro.sep62k4@gmail.com"
+                href="mailto:k.fujiyama@routem.net"
                 className="inline-flex items-center gap-2 text-base text-foreground-0 underline underline-offset-4 hover:opacity-60 transition-opacity"
               >
-                negitoro.sep62k4@gmail.com
+                k.fujiyama@routem.net
               </a>
             </motion.div>
           </div>
