@@ -7,9 +7,9 @@ import ThemeToggle from '@/app/_components/layout/ingredients/themeToggle';
 import Logo from '@/app/_components/layout/ingredients/logo';
 
 const NAV_LINKS = [
-  { label: 'Work',    href: '#work' },
-  { label: 'About',  href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Products', href: '#work' },
+  { label: 'Team',     href: '#members' },
+  { label: 'Contact',  href: '#contact' },
 ];
 
 const Header = memo(function Header() {
