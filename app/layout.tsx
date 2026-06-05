@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Portfolio site',
+  title: 'AYAstudio',
+  description: 'AYAstudio portfolio',
 };
 
 export default function RootLayout({
